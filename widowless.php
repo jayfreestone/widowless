@@ -26,3 +26,14 @@ function widowless( $content ) {
 
 add_filter('the_content', 'widowless');
 add_filter('the_title', 'widowless');
+
+
+function widowless_add_menu(){
+	add_options_page( 'Widowless', 'Widowless', 'manage_options', 'widowless-options', 'admin_page' );
+}
+
+add_action('admin_menu', 'widowless_add_menu');
+
+function admin_page(){
+	echo "<h1>Widowless Options</h1>";
+}
