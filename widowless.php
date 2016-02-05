@@ -10,7 +10,7 @@
  */
 
 function widowless( $content ) {
-	return preg_replace( '/(\s)(?=\w+.?<\/[a-zA-Z]\d?>)|(\s)(?=\w+$)/', '&nbsp;', $content );
+	return preg_replace( '/(\s)(?=\w+.?<\/[a-zA-Z]\d?>)|(\s)(?=\w+.?$)/', '&nbsp;', $content );
 }
 
 function setup_widowless( ) {
